@@ -1,0 +1,133 @@
+/* General Styles */
+
+/** {
+	box-sizing: border-box;
+}*/
+
+body {
+	font-family: sans-serif;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+	width: 100%;
+	padding: 1rem;
+	box-shadow: 0 2px 0 rgba(150, 150, 150, .5);
+	background: #0e51e8;
+	color: #fff;
+}
+
+nav {
+	width: 100%;
+	display: flex;
+}
+
+h1 {
+	margin: 0;
+	font-size: 1.25rem;
+	font-weight: normal;
+}
+
+main {
+	min-height: calc(100vh - 51px);
+	padding: 1rem;
+}
+
+/* Components */
+
+#username {
+	order: 2;
+	margin-right: auto;
+}
+
+#username h2 {
+	margin: 0;
+	font-size: .75rem;
+	font-weight: normal;
+}
+
+.profile-pic {
+	order: 1;
+	margin-right: 1rem;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+}
+
+main::after,
+.message.received::after,
+.message.sent::after {
+	content: '';
+	clear: both;
+	display: table;
+}
+
+/* Message Type */
+
+#message-type {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background: #fff;
+}
+
+#message-type input[type="text"] {
+	display: inline-block;
+	width: 100%;
+	border: 0;
+	border-top: 1px solid #f1f0f0;
+	padding: 1rem;
+	outline: 0;
+}
+
+#message-type input[type="submit"] {
+	display: inline-block;
+	width: 18%;
+	border: 0;
+	padding: 1rem;
+}
+
+/* Messages */
+
+.message {
+	max-width: 100%;
+	margin-top: 1rem;
+}
+
+.received + .received {
+	margin-top: .25rem;
+}
+
+.sent + .sent {
+	margin-top: .25rem;
+}
+
+.message:first-of-type {
+	margin-top: 4.5rem;
+}
+
+.message:last-of-type {
+	margin-bottom: 3rem;
+}
+
+.message p {
+	max-width: 100%;
+	margin: 0;
+	border-radius: 1.5rem;
+	padding: .7rem .9rem;
+	overflow-wrap: break-word;
+}
+
+.message.sent p {
+	float: right;
+	margin-left: 2rem;
+	background: #0e51e8;
+	color: #fff;
+}
+
+.message.received p {
+	background: #f1f0f0;
+	float: left;
+}
