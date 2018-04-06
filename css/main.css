@@ -14,7 +14,7 @@ header {
 	z-index: 1000;
 	width: 100%;
 	padding: 1rem;
-	box-shadow: 0 2px 0 rgba(150, 150, 150, .5);
+	box-shadow: 0 3px 0 rgba(0, 0, 0, .2);
 	background: #0e51e8;
 	color: #fff;
 }
